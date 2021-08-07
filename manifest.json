@@ -1,0 +1,33 @@
+{
+    "name": "Copy and paste Local storage",
+    "description": "Copy and paste Local storage",
+    "version": "1.0",
+    "manifest_version": 3,
+    "background": {
+        "service_worker": "background.js"
+      },
+    
+    "permissions": ["storage","tabs"],
+    "action":{
+        "default_icon": {
+            "16": "chrome-extention-assets/icon16.png",
+            "42": "chrome-extention-assets/icon48.png",
+            "128": "chrome-extention-assets/icon128.png"
+          },
+          "default_popup": "chrome-extention-assets/popup.html"
+    
+    },
+    "icons": {
+        "16": "chrome-extention-assets/icon16.png",
+        "42": "chrome-extention-assets/icon48.png",
+        "128": "chrome-extention-assets/icon128.png"
+    },
+    "content_scripts": [
+        {
+          "matches": ["<all_urls>"],
+          "js": ["chrome-extention-assets/content.js"]
+        }
+    ]
+
+}
+   
